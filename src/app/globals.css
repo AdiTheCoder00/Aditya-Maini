@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+/* ===== Sky Glass Design System ===== */
+
+@theme {
+  /* ---- Primary Palette ---- */
+  --color-primary: #00629d;
+  --color-primary-container: #00a3ff;
+  --color-primary-fixed: #cfe5ff;
+  --color-primary-fixed-dim: #98cbff;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #00375a;
+  --color-on-primary-fixed: #001d33;
+  --color-on-primary-fixed-variant: #004a77;
+  --color-inverse-primary: #98cbff;
+
+  /* ---- Secondary Palette ---- */
+  --color-secondary: #3c6184;
+  --color-secondary-container: #b0d5fe;
+  --color-secondary-fixed: #cfe5ff;
+  --color-secondary-fixed-dim: #a5caf2;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #375d7f;
+  --color-on-secondary-fixed: #001d33;
+  --color-on-secondary-fixed-variant: #22496b;
+
+  /* ---- Tertiary Palette ---- */
+  --color-tertiary: #904d00;
+  --color-tertiary-container: #eb8104;
+  --color-tertiary-fixed: #ffdcc3;
+  --color-tertiary-fixed-dim: #ffb77d;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #522900;
+  --color-on-tertiary-fixed: #2f1500;
+  --color-on-tertiary-fixed-variant: #6e3900;
+
+  /* ---- Surface Palette ---- */
+  --color-surface: #f7f9fb;
+  --color-surface-dim: #d8dadc;
+  --color-surface-bright: #f7f9fb;
+  --color-surface-container: #eceef0;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container-high: #e6e8ea;
+  --color-surface-container-highest: #e0e3e5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-variant: #e0e3e5;
+  --color-surface-tint: #00629d;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #3f4852;
+  --color-inverse-surface: #2d3133;
+  --color-inverse-on-surface: #eff1f3;
+
+  /* ---- Outline ---- */
+  --color-outline: #6f7883;
+  --color-outline-variant: #bec7d4;
+
+  /* ---- Error ---- */
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  /* ---- Typography ---- */
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  /* ---- Animations ---- */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 8s ease-in-out 2s infinite;
+  --animate-float-slow: float 10s ease-in-out 1s infinite;
+  --animate-typing-cursor: typing-cursor 1s steps(1) infinite;
+  --animate-slide-up: slide-up 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-pulse-soft: pulse-soft 3s ease-in-out infinite;
+  --animate-gradient-shift: gradient-shift 8s ease-in-out infinite;
+}
+
+/* ===== Keyframes ===== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  25% { transform: translateY(-20px) translateX(10px); }
+  50% { transform: translateY(-10px) translateX(-5px); }
+  75% { transform: translateY(-25px) translateX(5px); }
+}
+
+@keyframes typing-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes progress-bar {
+  from { width: 0%; }
+  to { width: 85%; }
+}
+
+/* ===== Base Styles ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  font-family: var(--font-body);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-primary-container) 40%, transparent);
+  color: var(--color-on-primary-container);
+}
+
+/* ===== Glass Utilities ===== */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* ===== Atmospheric Shadows ===== */
+
+.shadow-sky-sm {
+  box-shadow: 0px 10px 20px rgba(0, 98, 157, 0.04);
+}
+
+.shadow-sky-md {
+  box-shadow: 0px 20px 40px rgba(0, 98, 157, 0.08);
+}
+
+.shadow-sky-lg {
+  box-shadow: 0px 40px 80px rgba(0, 98, 157, 0.06);
+}
+
+.shadow-sky-nav {
+  box-shadow: 0px 20px 40px rgba(0, 98, 157, 0.08);
+}
+
+/* ===== Scrollbar ===== */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* ===== Material Symbols ===== */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

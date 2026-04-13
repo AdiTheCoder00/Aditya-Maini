@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sky Glass Editorial | Projects Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "primary-container": "#00a3ff",
+                        "surface": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "on-surface-variant": "#3f4852",
+                        "secondary-container": "#b0d5fe",
+                        "on-background": "#191c1e",
+                        "tertiary-container": "#eb8104",
+                        "surface-container": "#eceef0",
+                        "on-secondary-fixed": "#001d33",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#cfe5ff",
+                        "on-primary-fixed-variant": "#004a77",
+                        "primary": "#00629d",
+                        "on-tertiary-fixed": "#2f1500",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed-dim": "#a5caf2",
+                        "inverse-primary": "#98cbff",
+                        "on-tertiary-container": "#522900",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary": "#3c6184",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary": "#904d00",
+                        "tertiary-fixed": "#ffdcc3",
+                        "surface-tint": "#00629d",
+                        "primary-fixed-dim": "#98cbff",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "background": "#f7f9fb",
+                        "outline": "#6f7883",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-container": "#375d7f",
+                        "on-primary-container": "#00375a",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#bec7d4",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-fixed-variant": "#22496b",
+                        "secondary-fixed": "#cfe5ff",
+                        "surface-dim": "#d8dadc",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed": "#001d33"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<aside class="fixed inset-y-0 left-0 z-[60] flex flex-col p-6 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-2xl rounded-r-3xl h-full w-72 shadow-2xl shadow-sky-900/10 hidden md:flex">
+<div class="mb-12">
+<span class="font-manrope font-extrabold text-2xl text-sky-900">Portfolio</span>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-200 rounded-xl font-inter text-sm font-medium uppercase tracking-widest transition-all" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span>Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:pl-2 hover:bg-sky-50 dark:hover:bg-sky-900/20 rounded-xl font-inter text-sm font-medium uppercase tracking-widest transition-all" href="#">
+<span class="material-symbols-outlined">terminal</span>
+<span>Stack</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:pl-2 hover:bg-sky-50 dark:hover:bg-sky-900/20 rounded-xl font-inter text-sm font-medium uppercase tracking-widest transition-all" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<span>Writing</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:pl-2 hover:bg-sky-50 dark:hover:bg-sky-900/20 rounded-xl font-inter text-sm font-medium uppercase tracking-widest transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+<span>Contact</span>
+</a>
+</nav>
+</aside>
+<main class="md:ml-72 min-h-screen relative">
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,98,157,0.08)] bg-gradient-to-b from-sky-100/10 to-transparent">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sky-700">cloud_queue</span>
+<h1 class="text-xl font-black tracking-tighter text-sky-800">SKY_GLASS</h1>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-sky-700">menu</span>
+</div>
+</div>
+</header>
+<section class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="space-y-4">
+<span class="font-inter text-sm font-medium uppercase tracking-widest text-primary">PORTFOLIO</span>
+<h2 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface">Projects</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 group">
+<div class="glass-card rounded-xl overflow-hidden shadow-[0px_20px_40px_rgba(0,98,157,0.05)] border border-white/20 transition-all duration-300 hover:shadow-[0px_20px_40px_rgba(0,98,157,0.12)]">
+<div class="h-[400px] w-full relative overflow-hidden">
+<img alt="Technical background" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of clean source code on a high-resolution monitor with blue and purple ambient lighting reflecting on glass surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLeVlPbJnrPvMFz_hOW9aDEhtj30uyjIoyAm5b43qUTBZ45UqBrSYRuBIOzMfi_qB6lkSaOFxE8X7USykcnsQ9AkMGYA7u6c4OQVvvUrxIsC0zokqrXvuZuN4ccGwMj-G2oMsvAG0dLQYT_XwkhU34K-7gAv6pOBb94ZF-RZnOsylUiHbDz0XpKhJro7EkOlyNNPIqpmQT-SFj-cB5hzTMxVYsqu1JlYiJ2ZwBtwI0IFMuDMhGwt_BUt1zHGYjzK4FjWtA85gBLiI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sky-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary-container/20 text-on-primary-container text-xs px-3 py-1 rounded-full font-semibold">Typescript</span>
+<span class="bg-primary-container/20 text-on-primary-container text-xs px-3 py-1 rounded-full font-semibold">React</span>
+<span class="bg-primary-container/20 text-on-primary-container text-xs px-3 py-1 rounded-full font-semibold">PostgreSQL</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4">Lumina Analytics Dashboard</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed max-w-2xl">
+                                A high-density data visualization platform processing millions of events in real-time. Features custom charting engines and an ultra-responsive glassmorphism interface.
+                            </p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 transition-all hover:brightness-110 active:scale-95">
+<span class="material-symbols-outlined text-lg" data-weight="fill">rocket_launch</span>
+                                    Live Demo
+                                </button>
+<button class="border border-outline-variant/30 text-primary px-6 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 transition-all hover:bg-white/50 active:scale-95">
+<span class="material-symbols-outlined text-lg">code</span>
+                                    GitHub
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 space-y-8">
+<div class="glass-card rounded-xl overflow-hidden shadow-[0px_20px_40px_rgba(0,98,157,0.05)] border border-white/20 h-full flex flex-col group">
+<div class="h-56 relative overflow-hidden">
+<img alt="Technical background" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Abstract blue 3D geometric shapes floating in a white foggy space with soft directional sunlight and long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQo7RZ7vghJyyxSkNbFJIAL16TwKwkfvfwJzixLQJmf1AFstp54LgD6VY2s-nUKuDfMOe81rq64B2Zryk32SbkeUUVctvSYYJ3EXoQwGBPxERkLrfI05EsDN5SGYelP7Gw01ql5fEskF00chd2KGsewdpZ-3aa7MKd_LLopXvYJi3Jcpez1CrWXA41OdAzoceUUwUlvG6nNzhiYugNRwgWKQq1U5I8nIfgeCYg4BHbpaf0Dr-K7DncLqlf1gfRH45ytAaskyqBUw"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex gap-2 mb-4">
+<span class="bg-secondary-container/30 text-on-secondary-container text-xs px-3 py-1 rounded-full font-semibold">Go</span>
+<span class="bg-secondary-container/30 text-on-secondary-container text-xs px-3 py-1 rounded-full font-semibold">gRPC</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3">Velox Engine</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                                Low-latency microservices orchestrator designed for high-frequency financial trading systems.
+                            </p>
+<div class="mt-auto pt-4 flex gap-3">
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                                    Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                                    Source <span class="material-symbols-outlined text-sm">link</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 group">
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant/10 transition-all hover:bg-surface-container shadow-sm hover:shadow-md">
+<div class="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">CLI Suite: SkyCommand</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            A developer toolkit for automating cloud infrastructure deployments with elegant terminal outputs.
+                        </p>
+<div class="flex gap-4">
+<span class="text-xs font-mono text-primary bg-primary/5 px-2 py-1 rounded">Rust</span>
+<span class="text-xs font-mono text-primary bg-primary/5 px-2 py-1 rounded">Docker</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 group">
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant/10 transition-all hover:bg-surface-container shadow-sm hover:shadow-md">
+<div class="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">auto_awesome</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Neural Editor</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            AI-powered collaborative markdown editor with real-time semantic analysis and auto-completion.
+                        </p>
+<div class="flex gap-4">
+<span class="text-xs font-mono text-primary bg-primary/5 px-2 py-1 rounded">Next.js</span>
+<span class="text-xs font-mono text-primary bg-primary/5 px-2 py-1 rounded">OpenAI</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 group">
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant/10 transition-all hover:bg-surface-container shadow-sm hover:shadow-md">
+<div class="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">database</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">CloudSync DB</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            Distributed key-value store optimized for low-bandwidth environments and edge computing.
+                        </p>
+<div class="flex gap-4">
+<span class="text-xs font-mono text-primary bg-primary/5 px-2 py-1 rounded">C++</span>
+<span class="text-xs font-mono text-primary bg-primary/5 px-2 py-1 rounded">AWS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="relative z-10 glass-card p-10 rounded-3xl border border-white shadow-xl">
+<h4 class="font-headline text-3xl font-bold mb-6 text-sky-900">TECHNICAL STACK</h4>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h5 class="text-xs font-bold text-sky-500 uppercase tracking-widest mb-4">Frontend</h5>
+<ul class="space-y-3 text-on-surface-variant font-medium">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> React / Next.js</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Tailwind CSS</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Framer Motion</li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold text-sky-500 uppercase tracking-widest mb-4">Backend</h5>
+<ul class="space-y-3 text-on-surface-variant font-medium">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Node / Go</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> PostgreSQL</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Redis</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="font-headline text-4xl font-extrabold text-sky-900">CORE EXPERTISE</h2>
+<div class="pt-4">
+<a class="inline-flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all" href="#">
+                            View Full Technical Resume <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto bg-slate-50 border-t border-sky-100">
+<div class="mb-6 md:mb-0">
+<span class="font-manrope font-bold text-sky-800">Sky Glass Editorial</span>
+<p class="font-inter text-xs tracking-normal text-slate-400 mt-1">© 2024 Sky Glass Editorial. Built with precision.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-sky-500 transition-colors font-inter text-xs uppercase tracking-widest" href="#">GitHub</a>
+<a class="text-slate-400 hover:text-sky-500 transition-colors font-inter text-xs uppercase tracking-widest" href="#">LinkedIn</a>
+<a class="text-slate-400 hover:text-sky-500 transition-colors font-inter text-xs uppercase tracking-widest" href="#">Twitter</a>
+<a class="text-slate-400 hover:text-sky-500 transition-colors font-inter text-xs uppercase tracking-widest" href="#">Email</a>
+</div>
+</footer>
+</main>
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-[60] bg-white/90 backdrop-blur-xl border-t border-sky-50 px-6 py-4 flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-sky-600 font-semibold" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span class="text-[10px] uppercase tracking-tighter">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">terminal</span>
+<span class="text-[10px] uppercase tracking-tighter">Stack</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="text-[10px] uppercase tracking-tighter">Writing</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+<span class="text-[10px] uppercase tracking-tighter">Contact</span>
+</a>
+</nav>
+</body></html>

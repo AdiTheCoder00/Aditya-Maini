@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed-variant": "#004a77",
+                        "surface-tint": "#00629d",
+                        "surface-bright": "#f7f9fb",
+                        "outline": "#6f7883",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-fixed": "#cfe5ff",
+                        "error": "#ba1a1a",
+                        "tertiary": "#904d00",
+                        "secondary-container": "#b0d5fe",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#eb8104",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-high": "#e6e8ea",
+                        "primary": "#00629d",
+                        "on-primary-fixed": "#001d33",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "surface-container": "#eceef0",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#2f1500",
+                        "tertiary-fixed": "#ffdcc3",
+                        "outline-variant": "#bec7d4",
+                        "on-primary-container": "#00375a",
+                        "inverse-primary": "#98cbff",
+                        "on-secondary-fixed": "#001d33",
+                        "on-surface": "#191c1e",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#375d7f",
+                        "on-secondary-fixed-variant": "#22496b",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#a5caf2",
+                        "primary-container": "#00a3ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "secondary": "#3c6184",
+                        "inverse-surface": "#2d3133",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#cfe5ff",
+                        "on-tertiary-container": "#522900",
+                        "background": "#f7f9fb",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#98cbff",
+                        "on-surface-variant": "#3f4852"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,98,157,0.08)] h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
+<div class="text-2xl font-bold tracking-tighter text-sky-900 font-headline">Sky Glass Portfolio</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-slate-500 hover:text-sky-600 font-headline transition-all duration-300" href="#">Work</a>
+<a class="text-sky-600 font-semibold border-b-2 border-sky-600/30 font-headline transition-all duration-300" href="#">Expertise</a>
+<a class="text-slate-500 hover:text-sky-600 font-headline transition-all duration-300" href="#">Process</a>
+<a class="text-slate-500 hover:text-sky-600 font-headline transition-all duration-300" href="#">About</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-headline font-semibold scale-95 transition-transform ease-out hover:scale-100">
+                Let's Build
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 max-w-7xl mx-auto px-8">
+<!-- Expertise Header Section -->
+<section class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<span class="text-primary font-label uppercase tracking-widest text-sm font-semibold mb-4 block">Capabilities</span>
+<h1 class="text-6xl font-extrabold font-headline tracking-tighter text-on-surface leading-[1.1]">My Skills</h1>
+</div>
+<p class="text-on-surface-variant text-lg font-body max-w-md leading-relaxed">
+                Building expansive digital environments through precise engineering and atmospheric design principles.
+            </p>
+</section>
+<!-- Skills Bento Grid -->
+<section class="mb-32">
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- React Card -->
+<div class="md:col-span-2 lg:col-span-2 glass-card p-8 rounded-xl border border-outline-variant/15 flex flex-col justify-between aspect-square group hover:bg-surface-container-lowest transition-all duration-500">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="deployed_code">deployed_code</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold font-headline mb-2">React &amp; Next.js</h3>
+<p class="text-on-surface-variant text-sm">Building high-performance, SEO-optimized web applications with server-side rendering and hydration.</p>
+</div>
+</div>
+<!-- Python Card -->
+<div class="md:col-span-2 lg:col-span-1 glass-card p-8 rounded-xl border border-outline-variant/15 flex flex-col items-center justify-center text-center group hover:bg-surface-container-lowest transition-all duration-500">
+<div class="mb-4 text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="data_object">data_object</span>
+</div>
+<h3 class="text-xl font-bold font-headline">Python</h3>
+<div class="mt-4 flex gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container/20"></div>
+</div>
+</div>
+<!-- UI/UX Card -->
+<div class="md:col-span-2 lg:col-span-3 glass-card p-8 rounded-xl border border-outline-variant/15 flex gap-8 items-center bg-gradient-to-br from-white/40 to-primary-container/5">
+<div class="flex-1">
+<h3 class="text-3xl font-bold font-headline mb-4">Atmospheric UI</h3>
+<p class="text-on-surface-variant leading-relaxed">Focusing on clarity, depth, and intentional asymmetry to create digital spaces that breathe.</p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white/50 rounded-full text-xs font-label font-medium border border-outline-variant/10">Figma</span>
+<span class="px-3 py-1 bg-white/50 rounded-full text-xs font-label font-medium border border-outline-variant/10">Tailwind</span>
+<span class="px-3 py-1 bg-white/50 rounded-full text-xs font-label font-medium border border-outline-variant/10">Motion</span>
+</div>
+</div>
+<div class="hidden lg:block w-40 h-40 relative">
+<div class="absolute inset-0 bg-primary-container/20 rounded-full blur-2xl"></div>
+<div class="relative z-10 w-full h-full glass-card border border-white/40 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+</div>
+<!-- C++ Card -->
+<div class="md:col-span-2 lg:col-span-2 glass-card p-8 rounded-xl border border-outline-variant/15 flex flex-col justify-between group hover:bg-surface-container-lowest transition-all duration-500">
+<div class="flex justify-between items-start">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="memory">memory</span>
+</div>
+<span class="text-[10px] font-bold tracking-tighter text-outline bg-surface-container px-2 py-1 rounded">SYSTEMS</span>
+</div>
+<div class="mt-8">
+<h3 class="text-2xl font-bold font-headline mb-2">C++ &amp; Systems</h3>
+<p class="text-on-surface-variant text-sm">Low-level architecture and memory management for performance-critical engines.</p>
+</div>
+</div>
+<!-- TypeScript -->
+<div class="md:col-span-2 lg:col-span-2 glass-card p-8 rounded-xl border border-outline-variant/15 flex items-center gap-6 group hover:bg-surface-container-lowest transition-all duration-500">
+<div class="w-14 h-14 bg-sky-900 rounded-lg flex items-center justify-center text-white font-bold text-xl">TS</div>
+<div>
+<h3 class="font-bold font-headline text-xl">TypeScript</h3>
+<p class="text-on-surface-variant text-xs">Strict typing for scalable codebases.</p>
+</div>
+</div>
+<!-- Cloud/DevOps -->
+<div class="md:col-span-2 lg:col-span-2 glass-card p-8 rounded-xl border border-outline-variant/15 bg-inverse-surface group transition-all duration-500">
+<div class="flex items-center gap-4 text-surface mb-4">
+<span class="material-symbols-outlined" data-icon="cloud_queue">cloud_queue</span>
+<h3 class="font-bold font-headline">Cloud Infrastructure</h3>
+</div>
+<div class="space-y-2">
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[85%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-surface/60 font-label tracking-widest uppercase">
+<span>AWS / Azure</span>
+<span>85% Mastery</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="relative">
+<div class="flex flex-col md:flex-row gap-16">
+<!-- Sticky Section Title -->
+<div class="md:w-1/3 md:sticky md:top-32 h-fit">
+<span class="text-primary font-label uppercase tracking-widest text-sm font-semibold mb-4 block">Chronology</span>
+<h2 class="text-4xl font-extrabold font-headline tracking-tighter text-on-surface mb-6">Work History</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                        A history of building at the intersection of aesthetic luxury and technical robustness.
+                    </p>
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl" data-icon="download">download</span>
+</div>
+<div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">The Dossier</div>
+<div class="text-sm font-bold text-primary cursor-pointer hover:underline">Download Resume.pdf</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Flow -->
+<div class="md:w-2/3 space-y-12">
+<!-- Exp Item 1 -->
+<div class="relative pl-12 group">
+<div class="absolute left-0 top-0 bottom-0 w-[2px] bg-surface-container-highest group-last:bg-gradient-to-b group-last:from-surface-container-highest group-last:to-transparent"></div>
+<div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full border-2 border-primary bg-surface transition-transform duration-300 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="glass-card p-8 rounded-2xl border border-outline-variant/10 shadow-[0px_20px_40px_rgba(0,98,157,0.04)] hover:shadow-[0px_20px_40px_rgba(0,98,157,0.08)] transition-all duration-500">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+<h4 class="text-2xl font-bold font-headline text-on-surface">Senior Creative Engineer</h4>
+<span class="text-sm font-label font-semibold text-primary py-1 px-3 bg-primary/5 rounded-full">2022 — Present</span>
+</div>
+<div class="text-primary font-bold mb-4 tracking-tight">LUMINA ARCHITECTS DIGITAL</div>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                                Leading the architectural redesign of core visual engines. Spearheading the transition from legacy monolithic systems to a modern, decoupled atmospheric architecture.
+                            </p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Increased rendering performance by 40% through custom WebGL shaders.</span>
+</li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Managed a cross-functional team of 12 designers and developers.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Exp Item 2 -->
+<div class="relative pl-12 group">
+<div class="absolute left-0 top-0 bottom-0 w-[2px] bg-surface-container-highest"></div>
+<div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full border-2 border-primary bg-surface transition-transform duration-300 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="glass-card p-8 rounded-2xl border border-outline-variant/10 shadow-[0px_20px_40px_rgba(0,98,157,0.04)] hover:shadow-[0px_20px_40px_rgba(0,98,157,0.08)] transition-all duration-500">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+<h4 class="text-2xl font-bold font-headline text-on-surface">Full Stack Developer</h4>
+<span class="text-sm font-label font-semibold text-primary py-1 px-3 bg-primary/5 rounded-full">2019 — 2022</span>
+</div>
+<div class="text-primary font-bold mb-4 tracking-tight">VOID STUDIO</div>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                                Focused on high-end editorial digital experiences. Built complex backend logic integrated with fluid, glassmorphic front-end interfaces.
+                            </p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] font-bold text-outline-variant uppercase px-2 py-1 bg-surface-container rounded">Next.js</span>
+<span class="text-[10px] font-bold text-outline-variant uppercase px-2 py-1 bg-surface-container rounded">GraphQL</span>
+<span class="text-[10px] font-bold text-outline-variant uppercase px-2 py-1 bg-surface-container rounded">PostgreSQL</span>
+</div>
+</div>
+</div>
+<!-- Exp Item 3 -->
+<div class="relative pl-12 group">
+<div class="absolute left-0 top-0 bottom-0 w-[2px] bg-surface-container-highest"></div>
+<div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full border-2 border-primary bg-surface transition-transform duration-300 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="glass-card p-8 rounded-2xl border border-outline-variant/10 shadow-[0px_20px_40px_rgba(0,98,157,0.04)] hover:shadow-[0px_20px_40px_rgba(0,98,157,0.08)] transition-all duration-500">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+<h4 class="text-2xl font-bold font-headline text-on-surface">Junior Software Engineer</h4>
+<span class="text-sm font-label font-semibold text-primary py-1 px-3 bg-primary/5 rounded-full">2017 — 2019</span>
+</div>
+<div class="text-primary font-bold mb-4 tracking-tight">KINETIC LABS</div>
+<p class="text-on-surface-variant leading-relaxed">
+                                Contributed to the development of internal automation tools and responsive client dashboards using React and Python.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-40 mb-20">
+<div class="w-full py-20 px-12 bg-primary rounded-[2rem] relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img alt="" class="w-full h-full object-cover mix-blend-overlay" data-alt="abstract flowing blue and white digital waves with soft cinematic lighting and gradient depth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb22VJ9wDho3AQnlPutriEDYXdPn3REtR_a48uyS-wYrYuoXTGjSUOzwvFUX4VPb5YO3vuWWHKlezsByukGWRZhwjdSg-5qm8wGAXmW_19mf9EqgiIIXCaLy5gipk93M0DwzdJs923ykZ46WVfn35LwC0ETIhQf2rgeOfoXzOHP8Z9HVoFivRNMIYk_VBvFGdAl3ysworeuq_5sFshe3YbKkXWaD8MQa_u8qQdDtNMMjimOL8W1k9t3A9zM2HltZefQFnIyquFBjI"/>
+</div>
+<h2 class="relative z-10 text-4xl md:text-5xl font-extrabold font-headline text-white tracking-tighter mb-8 max-w-2xl">Ready to start?</h2>
+<div class="relative z-10 flex gap-4">
+<button class="bg-white text-primary px-10 py-4 rounded-full font-bold font-headline transition-transform hover:scale-105">
+                        Start a Project
+                    </button>
+<button class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-bold font-headline hover:bg-white/10 transition-all">
+                        View Dossier
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-sky-100/10 bg-slate-50">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto">
+<div class="text-slate-500 font-label text-sm tracking-wide uppercase mb-6 md:mb-0">
+                © 2024 Sky Glass Editorial. Built for the atmospheric architect.
+            </div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-sky-600 transition-colors font-label text-sm tracking-wide uppercase" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-sky-600 transition-colors font-label text-sm tracking-wide uppercase" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-sky-600 transition-colors font-label text-sm tracking-wide uppercase" href="#">Layers</a>
+<a class="text-slate-500 hover:text-sky-600 transition-colors font-label text-sm tracking-wide uppercase" href="#">Mail</a>
+</div>
+</div>
+</footer>
+</body></html>

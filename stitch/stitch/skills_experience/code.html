@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "primary-container": "#00a3ff",
+                    "surface": "#f7f9fb",
+                    "inverse-surface": "#2d3133",
+                    "on-surface-variant": "#3f4852",
+                    "secondary-container": "#b0d5fe",
+                    "on-background": "#191c1e",
+                    "tertiary-container": "#eb8104",
+                    "surface-container": "#eceef0",
+                    "on-secondary-fixed": "#001d33",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#cfe5ff",
+                    "on-primary-fixed-variant": "#004a77",
+                    "primary": "#00629d",
+                    "on-tertiary-fixed": "#2f1500",
+                    "surface-bright": "#f7f9fb",
+                    "secondary-fixed-dim": "#a5caf2",
+                    "inverse-primary": "#98cbff",
+                    "on-tertiary-container": "#522900",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary": "#3c6184",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary": "#904d00",
+                    "tertiary-fixed": "#ffdcc3",
+                    "surface-tint": "#00629d",
+                    "primary-fixed-dim": "#98cbff",
+                    "on-tertiary-fixed-variant": "#6e3900",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb77d",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-error-container": "#93000a",
+                    "background": "#f7f9fb",
+                    "outline": "#6f7883",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-container": "#375d7f",
+                    "on-primary-container": "#00375a",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#bec7d4",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary-fixed-variant": "#22496b",
+                    "secondary-fixed": "#cfe5ff",
+                    "surface-dim": "#d8dadc",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed": "#001d33"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,98,157,0.08)] bg-gradient-to-b from-sky-100/10 to-transparent">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sky-700 dark:text-sky-400" data-icon="cloud_queue">cloud_queue</span>
+<span class="text-xl font-black tracking-tighter text-sky-800 dark:text-sky-200">SKY_GLASS</span>
+</div>
+<!-- Desktop Nav Items mapping from NavigationDrawer JSON -->
+<nav class="hidden md:flex gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-sky-500 transition-colors font-inter text-sm font-medium uppercase tracking-widest" href="#">Projects</a>
+<a class="text-sky-600 dark:text-sky-300 font-semibold border-b-2 border-sky-500 font-inter text-sm font-medium uppercase tracking-widest" href="#">Stack</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-sky-500 transition-colors font-inter text-sm font-medium uppercase tracking-widest" href="#">Writing</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-sky-500 transition-colors font-inter text-sm font-medium uppercase tracking-widest" href="#">Contact</a>
+</nav>
+<button class="material-symbols-outlined text-sky-700 dark:text-sky-400 p-2 hover:bg-white/50 transition-all duration-300 rounded-full md:hidden" data-icon="menu">menu</button>
+</div>
+</header>
+<main class="pt-28 pb-20 max-w-7xl mx-auto px-8">
+<!-- Hero / Section Intro -->
+<section class="mb-24">
+<div class="flex flex-col gap-4 max-w-2xl">
+<span class="font-label text-sm font-bold uppercase tracking-[0.2em] text-primary">Tech Stack</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface">Skills &amp; Experience</h1>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                    Bridging the gap between robust engineering and ethereal user interfaces. My journey is defined by a commitment to clean code and atmospheric design.
+                </p>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Skills Bento -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<div class="flex items-center gap-4">
+<div class="h-px flex-1 bg-outline-variant/30"></div>
+<h2 class="font-headline text-2xl font-bold">Skills</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<!-- Skill Card: React -->
+<div class="glass-card p-6 rounded-xl border border-white/20 hover:bg-primary-container/10 transition-all duration-300 group">
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform" data-icon="component_exchange">component_exchange</span>
+<div>
+<h3 class="font-bold text-on-surface">React</h3>
+<p class="text-xs text-on-surface-variant">Component-based UI</p>
+</div>
+</div>
+</div>
+<!-- Skill Card: Next.js -->
+<div class="glass-card p-6 rounded-xl border border-white/20 hover:bg-primary-container/10 transition-all duration-300 group">
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform" data-icon="bolt">bolt</span>
+<div>
+<h3 class="font-bold text-on-surface">Next.js</h3>
+<p class="text-xs text-on-surface-variant">Full-stack Framework</p>
+</div>
+</div>
+</div>
+<!-- Skill Card: Python -->
+<div class="glass-card p-6 rounded-xl border border-white/20 hover:bg-primary-container/10 transition-all duration-300 group">
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform" data-icon="data_object">data_object</span>
+<div>
+<h3 class="font-bold text-on-surface">Python</h3>
+<p class="text-xs text-on-surface-variant">Scripting &amp; Logic</p>
+</div>
+</div>
+</div>
+<!-- Skill Card: C++ -->
+<div class="glass-card p-6 rounded-xl border border-white/20 hover:bg-primary-container/10 transition-all duration-300 group">
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform" data-icon="memory">memory</span>
+<div>
+<h3 class="font-bold text-on-surface">C++</h3>
+<p class="text-xs text-on-surface-variant">Systems Architecture</p>
+</div>
+</div>
+</div>
+<!-- Skill Card: TypeScript -->
+<div class="glass-card p-6 rounded-xl border border-white/20 hover:bg-primary-container/10 transition-all duration-300 group">
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform" data-icon="code">code</span>
+<div>
+<h3 class="font-bold text-on-surface">TypeScript</h3>
+<p class="text-xs text-on-surface-variant">Type-safe Logic</p>
+</div>
+</div>
+</div>
+<!-- Skill Card: Design -->
+<div class="glass-card p-6 rounded-xl border border-white/20 hover:bg-primary-container/10 transition-all duration-300 group">
+<div class="flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform" data-icon="brush">brush</span>
+<div>
+<h3 class="font-bold text-on-surface">Figma</h3>
+<p class="text-xs text-on-surface-variant">UI/UX Design</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Achievements Grid -->
+<div class="flex items-center gap-4 mt-8">
+<div class="h-px flex-1 bg-outline-variant/30"></div>
+<h2 class="font-headline text-2xl font-bold">Achievements</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="glass-card p-8 rounded-3xl border border-white/20 shadow-sm relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
+<span class="material-symbols-outlined text-tertiary mb-4 block" data-icon="military_tech">military_tech</span>
+<h4 class="font-bold text-lg mb-2">Hackathon Winner 2023</h4>
+<p class="text-sm text-on-surface-variant">Recognized for "Best Architectural UI" in the Global Fintech Summit.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl border border-white/20 shadow-sm relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
+<span class="material-symbols-outlined text-tertiary mb-4 block" data-icon="verified">verified</span>
+<h4 class="font-bold text-lg mb-2">AWS Certified</h4>
+<p class="text-sm text-on-surface-variant">Solutions Architect Associate certification with focus on scalable clouds.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Experience Timeline -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="flex items-center gap-4">
+<div class="h-px flex-1 bg-outline-variant/30"></div>
+<h2 class="font-headline text-2xl font-bold">Experience</h2>
+</div>
+<div class="relative pl-8 flex flex-col gap-12 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-primary before:via-primary-container/40 before:to-transparent">
+<!-- Exp Item 1 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1.5 w-4 h-4 rounded-full border-2 border-primary bg-surface z-10"></div>
+<div>
+<span class="font-label text-xs font-bold text-primary tracking-widest uppercase mb-2 block">2023 — Present</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">Senior Frontend Architect</h3>
+<p class="text-sm font-medium text-sky-700 mb-4">CloudVibe Editorial</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Leading the design system initiative, migrating 40+ micro-services to a unified "Sky Glass" aesthetic. Improved rendering performance by 40%.
+                            </p>
+</div>
+</div>
+<!-- Exp Item 2 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1.5 w-4 h-4 rounded-full border-2 border-primary-container bg-surface z-10"></div>
+<div>
+<span class="font-label text-xs font-bold text-on-surface-variant tracking-widest uppercase mb-2 block">2021 — 2023</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">Full Stack Developer</h3>
+<p class="text-sm font-medium text-sky-700 mb-4">Nexus Core Solutions</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Developed modular ERP components using React and Node.js. Optimized SQL queries reducing dashboard latency by 1.2s.
+                            </p>
+</div>
+</div>
+<!-- Exp Item 3 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1.5 w-4 h-4 rounded-full border-2 border-outline-variant bg-surface z-10"></div>
+<div>
+<span class="font-label text-xs font-bold text-on-surface-variant tracking-widest uppercase mb-2 block">2019 — 2021</span>
+<h3 class="font-headline text-xl font-bold text-on-surface">Computer Science Degree</h3>
+<p class="text-sm font-medium text-sky-700 mb-4">University of Tech</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Specialized in Software Engineering and Human-Computer Interaction. Graduated with honors.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Featured Image / Visual Decoration -->
+<div class="mt-8 rounded-[2rem] overflow-hidden aspect-video relative group shadow-2xl shadow-sky-900/10">
+<img alt="Workstation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern clean workstation with high-end mechanical keyboard and large monitor showing minimalist code editor in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDimpRmVOZqNUHs71vYKwY7H4C3hBnAgMy0caPOK_XgWA4uXMEM8C6KcJwaZjYem3t9zJUrMhZzTZtDk6qgTysCGDw1JmYEAjd_KO9WFwMkEJw9po7eYZSMkGRlI7FqpkodrAppBVKFt084WQst-Vge-x7eiBliInoyu1YqxLNRXbl_ivoiY1Hqiht533zA5zJ_hG9jqNBYCteTTgOwF1VSM6I0c-iCT5yP51moGUc_kS1sPBLzFpUCWR-SKqm6ktHcZ0wvJePfMA4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sky-900/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-bold tracking-tight">Crafting from the heart.</p>
+<p class="text-xs opacity-80 uppercase tracking-widest">Berlin, DE</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-sky-100 dark:border-sky-900/30 bg-slate-50 dark:bg-slate-950">
+<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+<div class="flex flex-col gap-2 mb-8 md:mb-0">
+<span class="font-manrope font-bold text-sky-800 text-lg">SKY_GLASS</span>
+<p class="font-inter text-xs tracking-normal text-slate-400">© 2024 Sky Glass Editorial. Built with precision.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-sky-500 transition-colors font-inter text-xs tracking-normal font-medium uppercase" href="#">GitHub</a>
+<a class="text-slate-400 hover:text-sky-500 transition-colors font-inter text-xs tracking-normal font-medium uppercase" href="#">LinkedIn</a>
+<a class="text-slate-400 hover:text-sky-500 transition-colors font-inter text-xs tracking-normal font-medium uppercase" href="#">Twitter</a>
+<a class="text-slate-400 hover:text-sky-500 transition-colors font-inter text-xs tracking-normal font-medium uppercase" href="#">Email</a>
+</div>
+</div>
+</footer>
+<!-- NavigationDrawer (Mobile Only Overlay Logic) -->
+<div class="fixed inset-0 z-[60] bg-black/20 backdrop-blur-sm hidden md:hidden" id="drawer">
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col p-6 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-2xl rounded-r-3xl h-full w-72 shadow-2xl shadow-sky-900/10">
+<div class="flex items-center justify-between mb-10">
+<span class="font-manrope font-extrabold text-2xl text-sky-900">Portfolio</span>
+<button class="material-symbols-outlined" data-icon="close" onclick="document.getElementById('drawer').classList.add('hidden')">close</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-4 text-slate-500 dark:text-slate-400 hover:pl-2 transition-all font-inter text-sm font-medium uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span> Projects
+                </a>
+<a class="flex items-center gap-4 p-4 bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-200 rounded-xl font-inter text-sm font-medium uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span> Stack
+                </a>
+<a class="flex items-center gap-4 p-4 text-slate-500 dark:text-slate-400 hover:pl-2 transition-all font-inter text-sm font-medium uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span> Writing
+                </a>
+<a class="flex items-center gap-4 p-4 text-slate-500 dark:text-slate-400 hover:pl-2 transition-all font-inter text-sm font-medium uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span> Contact
+                </a>
+</nav>
+</div>
+</div>
+</body></html>
