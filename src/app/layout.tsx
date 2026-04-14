@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
         className={`${manrope.variable} ${inter.variable} font-body antialiased`}
       >
         <ScrollProgress />
+        <BackToTop />
         {children}
       </body>
     </html>

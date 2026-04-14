@@ -83,7 +83,7 @@ export default function HeroSection() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold font-headline leading-[1.05] tracking-tight text-on-surface"
           >
             I&apos;m{" "}
-            <span className="text-primary">Aditya Maini</span>.{" "}
+            <span className="text-primary">Aditya</span>.{" "}
             <span className="block mt-2">
               <span className="text-on-surface-variant">{typedRole}</span>
               <span className="inline-block w-[3px] h-[0.85em] bg-primary ml-1 align-middle animate-typing-cursor" />

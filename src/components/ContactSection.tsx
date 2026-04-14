@@ -19,12 +19,63 @@ export default function ContactSection() {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    
+    // Basic validation
+    if (!formState.name || !formState.email || !formState.message) {
+      setError("Please fill in all required fields.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError(null);
+
+    const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT;
+
+    if (!endpoint) {
+        // Fallback for demonstration if environment variable is missing
+        console.warn("NEXT_PUBLIC_FORM_ENDPOINT is not set.");
+        setTimeout(() => {
+          setIsSubmitting(false);
+          setSubmitted(true);
+          setFormState({ name: "", email: "", subject: "", message: "" });
+          setTimeout(() => setSubmitted(false), 5000);
+        }, 1500);
+        return;
+    }
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formState),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormState({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        const data = await response.json().catch(() => null);
+        if (data && data.errors) {
+          setError(data.errors.map((err: any) => err.message).join(", "));
+        } else {
+          setError("Oops! There was a problem submitting your form.");
+        }
+      }
+    } catch (err) {
+      setError("Oops! There was a network error submitting your form.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -76,10 +127,11 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-outline px-1">
-                    Name
+                    Name*
                   </label>
                   <input
                     type="text"
+                    required
                     placeholder="Design Maven"
                     value={formState.name}
                     onChange={(e) =>
@@ -90,10 +142,11 @@ export default function ContactSection() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-outline px-1">
-                    Email
+                    Email*
                   </label>
                   <input
                     type="email"
+                    required
                     placeholder="hello@studio.com"
                     value={formState.email}
                     onChange={(e) =>
@@ -119,9 +172,10 @@ export default function ContactSection() {
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-outline px-1">
-                  Message
+                  Message*
                 </label>
                 <textarea
+                  required
                   placeholder="Tell me about the atmosphere you want to build..."
                   rows={5}
                   value={formState.message}
@@ -131,13 +185,28 @@ export default function ContactSection() {
                   className="w-full bg-surface-container-high border-none rounded-xl p-4 focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all duration-300 outline-none resize-none"
                 />
               </div>
+
+              {error && (
+                <div className="p-4 bg-error/10 border border-error/20 rounded-xl text-error text-sm font-medium">
+                  {error}
+                </div>
+              )}
+
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02, filter: "brightness(1.1)" }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-3"
+                disabled={isSubmitting || submitted}
+                whileHover={{ scale: isSubmitting || submitted ? 1 : 1.02, filter: isSubmitting || submitted ? "none" : "brightness(1.1)" }}
+                whileTap={{ scale: isSubmitting || submitted ? 1 : 0.98 }}
+                className={`w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-3 ${
+                  (isSubmitting || submitted) ? "opacity-80 cursor-not-allowed" : ""
+                }`}
               >
-                {submitted ? (
+                {isSubmitting ? (
+                  <>
+                    Sending...
+                    <span className="material-symbols-outlined animate-spin">refresh</span>
+                  </>
+                ) : submitted ? (
                   <>
                     Message Sent!
                     <span className="material-symbols-outlined">check_circle</span>
