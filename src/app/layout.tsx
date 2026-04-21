@@ -6,6 +6,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import TargetCursor from "@/components/TargetCursor";
 import SmoothScroll from "@/components/SmoothScroll";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -76,6 +77,7 @@ export default function RootLayout({
           {children}
         </SmoothScroll>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
