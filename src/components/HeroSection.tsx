@@ -97,7 +97,7 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 pt-4">
             <motion.button
-              whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
               className="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-headline font-semibold tracking-wide text-lg transition-all flex items-center gap-2 cursor-target"
@@ -106,7 +106,7 @@ export default function HeroSection() {
               <span className="material-symbols-outlined">arrow_outward</span>
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(0, 98, 157, 0.05)" }}
+              whileHover={{ scale: 1.05, backgroundColor: "var(--color-primary-fixed-dim)" }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               className="bg-transparent border border-outline-variant/20 text-primary px-8 py-4 rounded-full font-bold text-lg transition-all cursor-target"

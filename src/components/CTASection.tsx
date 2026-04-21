@@ -39,7 +39,7 @@ export default function CTASection() {
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
             <motion.button
-              whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               className="bg-primary-container text-on-primary-container px-8 md:px-10 py-4 md:py-5 rounded-full font-headline font-semibold tracking-wide text-lg transition-all"
