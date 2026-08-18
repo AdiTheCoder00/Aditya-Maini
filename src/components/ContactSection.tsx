@@ -134,14 +134,16 @@ export default function ContactSection() {
             Open for high-impact collaborations and architectural code
             inquiries.
           </p>
-          <motion.button
+          <motion.a
+            href="/resume.pdf"
+            download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 px-6 py-3 rounded-full border border-outline-variant/20 text-primary font-semibold hover:bg-surface-container-low transition-all"
+            className="flex items-center gap-2 px-6 py-3 rounded-full border border-outline-variant/20 text-primary font-semibold hover:bg-surface-container-low transition-all cursor-target"
           >
             <span className="material-symbols-outlined">download</span>
             Download Resume
-          </motion.button>
+          </motion.a>
         </motion.div>
       </motion.header>
 

@@ -46,6 +46,7 @@ function DockItem({
   children,
   className = '',
   onClick,
+  label,
   mouseX,
   spring,
   distance,
@@ -55,6 +56,7 @@ function DockItem({
   children: ReactElement | ReactElement[];
   className?: string;
   onClick?: () => void;
+  label: string;
   mouseX: ReturnType<typeof useMotionValue<number>>;
   spring: SpringOptions;
   distance: number;
@@ -88,10 +90,16 @@ function DockItem({
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick?.();
+        }
+      }}
       className={`dock-item cursor-target ${className}`}
       tabIndex={0}
       role="button"
-      aria-haspopup="true"
+      aria-label={label}
     >
       {Children.map(children, (child) =>
         cloneElement(child as ReactElement<{ isHovered?: typeof isHovered }>, {
@@ -199,6 +207,7 @@ export default function Dock({
           <DockItem
             key={index}
             onClick={item.onClick}
+            label={item.label}
             className={item.className}
             mouseX={mouseX}
             spring={spring}

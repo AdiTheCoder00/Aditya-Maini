@@ -46,13 +46,15 @@ export default function CTASection() {
             >
               Start a Conversation
             </motion.button>
-            <motion.button
+            <motion.a
+              href="/resume.pdf"
+              download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-surface-container-low border border-outline-variant/20 text-on-surface px-8 md:px-10 py-4 md:py-5 rounded-full font-medium tracking-wide text-lg hover:bg-surface-container-lowest transition-all"
+              className="bg-surface-container-low border border-outline-variant/20 text-on-surface px-8 md:px-10 py-4 md:py-5 rounded-full font-medium tracking-wide text-lg hover:bg-surface-container-lowest transition-all cursor-target"
             >
               Download Resume
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </motion.div>

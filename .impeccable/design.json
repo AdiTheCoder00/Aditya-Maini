@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-18T00:00:00Z",
+  "title": "Design System: Sky Glass Editorial",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Ocean Blue", "canonical": "#00629d" },
+      "primary-container": { "role": "primary", "displayName": "Sky Accent", "canonical": "#00a3ff" },
+      "primary-dark": { "role": "primary", "displayName": "Aurora Violet", "canonical": "#d0bcff" },
+      "primary-container-dark": { "role": "primary", "displayName": "Aurora Glow", "canonical": "#a855f7" },
+      "surface": { "role": "neutral", "displayName": "Sky Surface", "canonical": "#f7f9fb" },
+      "surface-dark": { "role": "neutral", "displayName": "Midnight Surface", "canonical": "#0f0d13" },
+      "on-surface": { "role": "neutral", "displayName": "Ink", "canonical": "#191c1e" },
+      "on-surface-dark": { "role": "neutral", "displayName": "Moonlight Ink", "canonical": "#e6e1e5" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name/role statement only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "label": { "displayName": "Label", "purpose": "Uppercase eyebrow text and badges." }
+    },
+    "shadows": [
+      { "name": "shadow-sky-sm", "value": "0px 10px 20px rgba(0,98,157,0.04)", "purpose": "Resting elevation for standard cards." },
+      { "name": "shadow-sky-md", "value": "0px 20px 40px rgba(0,98,157,0.08)", "purpose": "Floating nav dock and hovered cards." },
+      { "name": "shadow-sky-lg", "value": "0px 40px 80px rgba(0,98,157,0.06)", "purpose": "Large panels (CTA section)." },
+      { "name": "glow-card", "value": "0 0 20px rgba(0,163,255,.12), 0 0 60px rgba(0,163,255,.06)", "purpose": "Purple/blue ambient glow on hover for stat and expertise cards." }
+    ],
+    "motion": [
+      { "name": "sky-easing", "value": "cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "Shared easing for all entrance and hover motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action pill button (View Projects, Send Message).",
+      "html": "<button class=\"ds-btn-primary\">View Projects</button>",
+      "css": ".ds-btn-primary { background: #00a3ff; color: #00375a; border-radius: 9999px; padding: 16px 32px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 1.125rem; border: none; transition: transform 0.2s ease, filter 0.2s ease; } .ds-btn-primary:hover { transform: scale(1.05); filter: brightness(1.1); } .ds-btn-primary:active { transform: scale(0.95); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ghost-style secondary action (Contact Me, Download Resume).",
+      "html": "<button class=\"ds-btn-secondary\">Contact Me</button>",
+      "css": ".ds-btn-secondary { background: transparent; color: #00629d; border: 1px solid rgba(190, 199, 212, 0.2); border-radius: 9999px; padding: 16px 32px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.125rem; transition: transform 0.2s ease, background 0.2s ease; } .ds-btn-secondary:hover { transform: scale(1.05); background: #f2f4f6; }"
+    },
+    {
+      "name": "Glass Card",
+      "kind": "card",
+      "refersTo": "card-glass",
+      "description": "Base translucent card used across expertise, stats, and project surfaces.",
+      "html": "<div class=\"ds-glass-card\"><h3 class=\"ds-glass-card-title\">Full-Stack Architect</h3><p class=\"ds-glass-card-desc\">Scalable systems, precisely engineered.</p></div>",
+      "css": ".ds-glass-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(190,199,212,0.1); border-radius: 1.5rem; padding: 24px; box-shadow: 0px 10px 20px rgba(0,98,157,0.04); transition: box-shadow 0.5s ease, transform 0.3s ease; } .ds-glass-card:hover { transform: translateY(-8px); box-shadow: 0px 20px 40px rgba(0,98,157,0.08), 0 0 20px rgba(0,163,255,.12); } .ds-glass-card-title { font-family: 'Manrope', sans-serif; font-weight: 700; color: #191c1e; margin-bottom: 8px; } .ds-glass-card-desc { font-family: 'Inter', sans-serif; font-weight: 300; color: #3f4852; font-size: 0.875rem; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Contact form field with focus ring.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Design Maven\" />",
+      "css": ".ds-input { width: 100%; background: #e6e8ea; border: none; border-radius: 0.75rem; padding: 16px; font-family: 'Inter', sans-serif; color: #191c1e; outline: none; transition: background 0.3s ease, box-shadow 0.3s ease; } .ds-input:focus { background: #ffffff; box-shadow: 0 0 0 2px #00a3ff; }"
+    },
+    {
+      "name": "Dock Nav Item",
+      "kind": "nav",
+      "refersTo": "nav-dock-item",
+      "description": "Floating desktop navigation dock icon button.",
+      "html": "<button class=\"ds-dock-item\" aria-label=\"Home\">&#8962;</button>",
+      "css": ".ds-dock-item { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 0.75rem; background: rgba(255,255,255,0.6); border: 1px solid rgba(0,98,157,0.08); box-shadow: 0 2px 8px rgba(0,98,157,0.06); color: #3f4852; cursor: pointer; transition: color 0.2s ease, background 0.2s ease; } .ds-dock-item:hover, .ds-dock-item:focus-visible { color: #00629d; background: rgba(207,229,255,0.5); border-color: rgba(0,98,157,0.2); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Atmospheric Architect",
+    "overview": "This system treats the screen as an open sky rather than a boxed-in document: a fluid, expansive environment where code and craft coexist. It exists in two committed states — Sky Glass (light mode), a clean, oceanic-blue frosted-glass aesthetic, and Midnight Aurora (dark mode), an immersive violet aesthetic featuring an interactive WebGL ripple grid that reacts to the cursor. The same tonal-layering, glass, and shape language carries across both; only the hue family and interactive dark-mode background layer change.\n\nComponents read as airy and glass-forged: weightless, translucent, never heavy or industrial. Depth comes from stacked frosted sheets and hue-tinted ambient shadows, never from flat gray drop-shadows. The system breaks the \"developer-portfolio template\" look through intentional asymmetry — expansive whitespace, occasional overlapping glass containers, bento-style grids that vary column span rather than repeating identical tiles.",
+    "keyCharacteristics": [
+      "Dual committed themes (Sky Glass / Midnight Aurora), not a single palette with an inverted dark variant.",
+      "No 1px solid divider lines anywhere; section and card boundaries are drawn with background tone shifts or a ghost border.",
+      "Every shadow and glow is hue-tinted (blue in light mode, violet in dark), never neutral gray or pure black.",
+      "Entrance motion is a first-class citizen: sections fade/slide up on scroll via a single shared easing curve."
+    ],
+    "rules": [
+      { "name": "The No-Line Rule", "body": "1px solid dividers are prohibited for sectioning. Boundaries are drawn by shifting background color or, when a container would otherwise vanish into its background, by a Ghost Border: outline-variant at 10-20% opacity.", "section": "colors" },
+      { "name": "The Tinted Shadow Rule", "body": "Shadows are never neutral gray or pure black; they carry the mode's primary hue.", "section": "colors" },
+      { "name": "The Contrast Bridge Rule", "body": "Pair a bold headline in on-surface with an uppercase label-weight sub-header in primary directly above it. The size/weight jump carries the hierarchy before the copy is read.", "section": "typography" },
+      { "name": "The Glass Rule", "body": "True glass surfaces combine surface-container-lowest at ~70-80% opacity with backdrop-filter blur(10-24px). Reserve it for floating/overlapping elements, not full-bleed section backgrounds.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use asymmetrical, unequal-column layouts (7/5, 8/4) over centered/symmetric grids.",
+      "Do tint every shadow and glow with the mode's primary hue; a gray shadow is a bug.",
+      "Do use the shared easing curve cubic-bezier(0.2, 0.8, 0.2, 1) for all entrance and hover motion.",
+      "Do reserve the purple/violet glow accent (168, 85, 247) for Magic Bento / spotlight components specifically, even in light mode — it's a signature, not a general accent."
+    ],
+    "donts": [
+      "Don't use 1px solid divider lines to separate sections or list items — shift background tone or use the Ghost Border instead.",
+      "Don't use pure black (#000000) or pure white (#ffffff) for text — use on-surface.",
+      "Don't darken a primary button on hover — brighten or scale it instead.",
+      "Don't crowd sections; if unsure whether there's enough whitespace, double the vertical padding rather than trim content."
+    ]
+  }
+}
